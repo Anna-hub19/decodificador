@@ -20,7 +20,7 @@ body{
     margin-left: 10%;
     margin-bottom: 20px;
     margin: 5%;
-    gap: 90%;
+    gap: 80%;
 }
 
 
@@ -72,6 +72,8 @@ body{
     padding: 20px;
     border-radius: 24px;
     font-size: 16px;
+}
+.invisivel{
     display: none;
 }
 .div-bt{
@@ -109,7 +111,10 @@ body{
     color: #343A40;
     font-size: 16px;
 }
-
+.rodape{
+    font-size: 24px;
+    text-align: center;
+}
 @media(max-width: 950px){
     .conteudo{
         flex-direction: column;
@@ -146,3 +151,4 @@ body{
     margin: 10px;
   }
 }
+

@@ -12,7 +12,7 @@
     </header>
     <main class="conteudo">
         <section class="conteudo-colocar-texto">
-        <input type="text" placeholder="Digite seu texto" class="input-texto">
+        <input type="text" placeholder="Digite seu texto" class="input-texto"  onchange="inputVazio()">
         <section class="conteudo-botao">
             <p class="aviso"><img src="./imagens/exclamacao.png" alt=""> Apenas letras minúsculas e sem acento.</p>
             <div class="div-bt">
@@ -22,11 +22,15 @@
         </section>
     </section>
         <section class="conteudo-resultado">
-            <img src="./imagens/semtexto.svg" alt="" class="img-resultado">
+            <img src="./imagens/semtexto.svg" alt="imagem mostrando que não tem texto" class="img-resultado">
             <h2 class="titulo-resultado">Nenhuma mensagem <br> encontrada</h2>
+            <h3 class="resultado"></h3>
             <p class="paragrafo-resultado">Digite um texto que você deseja  <br> criptografar ou descriptografar.</p>
-            <button class="bt-copiar">Copiar</button>
+            <p class="result-Copiar"></p>
+            <button class="bt-copiar invisivel">Copiar</button>
         </section>
     </main>
+    <footer class="rodape"><p>beatriz.codes</p></footer>
+    <script src="./script.js"></script>
 </body>
 </html>
