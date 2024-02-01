@@ -48,7 +48,7 @@ body{
     font-size: 16px;
    margin-right: 3px;
 }
-.bt-cript:hover, .bt-descript:hover, .bt-copiar:hover{
+.bt-cript:hover, .bt-descript:hover, .bt-copiar:hover, .bt-limpar:hover{
     background-color: #fff;
     color: #0A3871;
    
@@ -72,6 +72,20 @@ body{
     padding: 20px;
     border-radius: 24px;
     font-size: 16px;
+}
+.bt-limpar{
+    width: 250px;
+    background-color: #D8DFE8;
+    color: #0A3871;
+    border: 1px solid #0A3871;
+    padding: 20px;
+    border-radius: 24px;
+    font-size: 16px;
+}
+.div-bt-resultado{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 .invisivel{
     display: none;
@@ -132,7 +146,7 @@ body{
         margin: 30% 0% 0% 0%;
     }
 }
-@media(max-width: 400px){
+@media(max-width: 660px){
     .conteudo{
         flex-direction: column;
         justify-content: center;
@@ -150,5 +164,27 @@ body{
   .bt-cript, .bt-descript{
     margin: 10px;
   }
+}
+@media(max-width: 370px){
+    .conteudo{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 50px;
+    }
+    .input-texto{
+        text-align: center;
+        padding: 10%;
+        font-size: 30px;
+      }
+  .aviso{
+    margin-left: 15%;
+  }
+  .bt-cript, .bt-descript{
+    width: 250px;
+  }
+  .conteudo-resultado{
+   height: 100%;
+}
 }
 

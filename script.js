@@ -6,7 +6,9 @@ const imgInv = document.querySelector('.img-resultado');
 const btCopiar = document.querySelector('.bt-copiar');
 const btDecod = document.querySelector('.bt-descript');
 const tituloInv = document.querySelector('.titulo-resultado');
-const copia = document.querySelector('.result-Copiar')
+const copia = document.querySelector('.result-Copiar');
+const btLimpar = document.querySelector('.bt-limpar');
+
 
 btCript.addEventListener('click', function cript(){
     var palavra = texto.value;
@@ -17,7 +19,8 @@ btCript.addEventListener('click', function cript(){
      paragrafoInv.classList.add('invisivel');
      imgInv.classList.add('invisivel');
      btCopiar.classList.remove('invisivel');
-   
+     btLimpar.classList.remove('invisivel');
+     copia.innerHTML = '';
     })
 
     btDecod.addEventListener('click', function descript(){
@@ -29,26 +32,27 @@ btCript.addEventListener('click', function cript(){
          paragrafoInv.classList.add('invisivel');
          imgInv.classList.add('invisivel');
          btCopiar.classList.remove('invisivel');
-       
+         btLimpar.classList.remove('invisivel');
+         copia.innerHTML = '';
         })
 
         btCopiar.addEventListener('click', function copiar(){
-            texto.select();
-            document.execCommand('copy');
-            copia.innerHTML = 'texto copiado';
+           const copiarResultado = resultado.innerHTML;
+           navigator.clipboard.writeText(copiarResultado);
+           copia.innerHTML = 'texto copiado';
         }
         )
-    
-        function inputVazio(){
-            if(texto.value == ''){
-                copia.innerHTML = '';
-                resultado.innerHTML = '';
-                tituloInv.classList.remove('invisivel');
-                paragrafoInv.classList.remove('invisivel');
-                imgInv.classList.remove('invisivel');
-                btCopiar.classList.add('invisivel');
-            }
-        }
+    btLimpar.addEventListener('click', function inputVazio(){
+            texto.value = '';
+            copia.innerHTML = '';
+            resultado.innerHTML = '';
+            tituloInv.classList.remove('invisivel');
+            paragrafoInv.classList.remove('invisivel');
+            imgInv.classList.remove('invisivel');
+            btCopiar.classList.add('invisivel');
+            btLimpar.classList.add('invisivel');
+    })
+        
     
 
 /*A letra "e" é convertida para "enter"
